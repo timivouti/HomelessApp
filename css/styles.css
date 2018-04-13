@@ -1,0 +1,137 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: 'Tajawal', sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	min-height: 0px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.name-logo {
+	margin: 20px auto;
+	display: block;
+}
+
+.login-button {
+	margin: 20px auto;
+	display: block;
+}
+
+.buy-button {
+	margin: 20px auto;
+	display: block;
+}
+
+.img-logo {
+	height: 150px;
+}
+
+.img-rolling {
+	margin: 20px auto;
+	display: block;
+	max-height: 38px;
+}
+
+.video-modal {
+	height: 90%;
+}
+
+.img-items {
+	max-height: 300px;
+	display: block;
+	margin: 0px auto;
+}
+
+.card {
+	margin: 5%;
+	background-color: #4ABDAC;
+	border-color: #4ABDAC;
+}
+
+.btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: #F78733 !important;
+	border-color: #F78733 !important;
+	width: 100px;
+	border-radius: 24px!important;
+}
+
+.form-control {
+	border-radius: 24px!important;
+}
+
+a {
+	color: #004D40 !important;
+}
+
+.col-3, .col-form-label {
+	color: white;
+}
+
+.p1 {
+font-size: 23px;
+color: #004D40 !important;
+}
+
+.text-center {
+	color: #004D40 !important;
+}
+
+p {
+	color: white;
+}
+
+.navbar, .navbar-default, .navbar-fixed-top {
+	background-color: #4ABDAC;
+}
+
+.img-responsive, .img-items {
+	border-color: #4ABDAC !important;
+	border: 1px solid transparent;
+	border-radius: 8px;
+}
+
+.jumbotron {
+	background-color: #DFDCE3;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HomelessApp</title>
+<meta name="description" content="App for homeless people">
+<meta name="author" content="SitePoint">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/navbar-fixed-top.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+</head>
+
+<body onload="ensureAuthenticationAndLoadStatistics()">
+  <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">HomelessApp</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index-logged.html">Support</a></li>
+              <li><a href="watch-ads.html">Watch Ads</a></li>
+              <li><a href="bought-items.html">Bought Items</a></li>
+              <li class="active"><a href="statistics.html">Statistics</a></li>
+              <li onClick="logOut()"><a href="#">Log Out</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <!-- REFRESH BUTTON -->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <div class="container" id="statistics">
+
+        <!-- Main component for a primary marketing message or call to action -->
+
+
+
+      </div> <!-- /container -->
+
+
+ </div> <!-- /container -->
+<script src="js/script.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

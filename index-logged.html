@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HomelessApp</title>
+<meta name="description" content="App for homeless people">
+<meta name="author" content="SitePoint">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/navbar-fixed-top.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+</head>
+
+<body onload="ensureAuthentication()">
+  <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">HomelessApp</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index-logged.html">Support</a></li>
+              <li><a href="watch-ads.html">Watch Ads</a></li>
+              <li><a href="bought-items.html">Bought Items</a></li>
+              <li><a href="statistics.html">Statistics</a></li>
+              <li onClick="logOut()"><a href="#">Log Out</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <!-- REFRESH BUTTON -->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <div class="container">
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <p class="text-center">Meal</p>
+          <br>
+          <img class="img-responsive img-items" src="img/meal.jpg" />
+          <br>
+          <p class="text-center">Buy meal</p>
+          <br>
+          <p class="text-center">Price: £6</p>
+          <button type="button" onClick="mealFire()" class="btn btn-success buy-button" data-toggle="modal" data-target="#paymentModal">Buy Now</button>
+        </div>
+
+        <div class="jumbotron">
+          <p class="text-center">Blanket</p>
+          <br>
+          <img class="img-responsive img-items" src="img/blanket.jpg" />
+          <br>
+          <p class="text-center">Buy blanket</p>
+          <br>
+          <p class="text-center">Price: £15</p>
+          <button type="button" onClick="blanketFire()" class="btn btn-success buy-button" data-toggle="modal" data-target="#paymentModal">Buy Now</button>
+        </div>
+
+      </div> <!-- /container -->
+
+      <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered video-modal" role="document">
+          <div class="modal-content video-modal">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modal-body" class="modal-body">
+            </div>
+          </div>
+        </div>
+      </div>
+
+ </div> <!-- /container -->
+<script src="js/script.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
