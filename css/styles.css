@@ -65,7 +65,8 @@ table {
 }
 
 .img-logo {
-	height: 150px;
+
+	height: 200px;
 }
 
 .img-rolling {
@@ -86,7 +87,7 @@ table {
 
 .card {
 	margin: 5%;
-	background-color: #4ABDAC;
+	background-color: #4ABDAC;	
 	border-color: #4ABDAC;
 }
 
@@ -123,15 +124,21 @@ p {
 }
 
 .navbar, .navbar-default, .navbar-fixed-top {
-	background-color: #4ABDAC;
+	background-color: #4ABDAC;	
 }
 
 .img-responsive, .img-items {
-	border-color: #4ABDAC !important;
-	border: 1px solid transparent;
+	border-color: #DFDCE3 !important;
+	border: 8px solid transparent;
 	border-radius: 8px;
+	height: 95%;
+	width: 95%;
 }
 
 .jumbotron {
-	background-color: #DFDCE3;
+	background-color: #4ABDAC;
 }
+
+
+
+
