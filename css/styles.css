@@ -194,4 +194,8 @@ p {
 		width: 100%;
 		margin: 0px;
 	}
+	.card, .card-body {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
