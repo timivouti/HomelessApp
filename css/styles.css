@@ -180,6 +180,13 @@ p {
 	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.nav-bar-logo {
+	height: 47px;
+	width: 40px;
+	margin: auto;
+	margin-left: 10px;
+}
+
 @media only screen and (min-width: 600px) {
     .back-button {
 			display: none;
