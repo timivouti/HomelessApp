@@ -87,7 +87,7 @@ table {
 
 .card {
 	margin: 5%;
-	background-color: #4ABDAC;	
+	background-color: #4ABDAC;
 	border-color: #4ABDAC;
 }
 
@@ -124,21 +124,67 @@ p {
 }
 
 .navbar, .navbar-default, .navbar-fixed-top {
-	background-color: #4ABDAC;	
+	background-color: #4ABDAC;
 }
 
 .img-responsive, .img-items {
 	border-color: #DFDCE3 !important;
 	border: 8px solid transparent;
 	border-radius: 8px;
-	height: 95%;
-	width: 95%;
 }
 
 .jumbotron {
 	background-color: #4ABDAC;
 }
 
+.back-button {
+	margin: 5%;
+	position: absolute;
+	color: #4ABDAC;
+}
 
+.back-button-big {
+	margin: 5%;
+	position: absolute;
+	color: #4ABDAC;
+	display: none;
+}
 
+.back-button a {
+	color: #4ABDAC !important;
+}
 
+.back-button-big a {
+	color: #4ABDAC !important;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: #F78733 !important;
+}
+
+.navbar {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.jumbotron {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@media only screen and (min-width: 600px) {
+    .back-button {
+			display: none;
+		}
+		.back-button-big {
+			display: block;
+		}
+}

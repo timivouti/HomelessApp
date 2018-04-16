@@ -304,7 +304,7 @@ function paymentModal() {
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <button class="btn btn-success btn-lg btn-block" onClick="buyItem()" type="button">Pay ${sessionStorage.getItem("item.price")} £</button>
+                    <button class="btn btn-success btn-lg btn-block" onClick="buyItem()" type="button">Pay £${sessionStorage.getItem("item.price")}</button>
                 </div>
             </div>
         </form>
