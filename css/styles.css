@@ -125,6 +125,8 @@ p {
 
 .navbar, .navbar-default, .navbar-fixed-top {
 	background-color: #4ABDAC;
+	border-color: #4ABDAC;
+	border: 0px;
 }
 
 .img-responsive, .img-items {
