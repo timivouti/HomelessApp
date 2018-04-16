@@ -190,9 +190,6 @@ p {
 }
 
 @media only screen and (max-width: 356px) {
-	.container {
-		padding: 0px;
-	}
 	.card {
 		width: 100%;
 		margin: 0px;
