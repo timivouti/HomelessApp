@@ -1,3 +1,5 @@
+// Declaring text inputs, login button, error field and API urls
+
 const loginButton = document.getElementById('loginButton');
 const email = document.getElementById('inputEmail');
 const password = document.getElementById('inputPassword');
@@ -8,6 +10,9 @@ const REGISTER_URL = 'https://homeless-app-backend.herokuapp.com/api/users';
 const ITEMS_URL = 'https://homeless-app-backend.herokuapp.com/api/items/';
 const ADS_URL = 'https://homeless-app-backend.herokuapp.com/api/ads/';
 const USER_URL = 'https://homeless-app-backend.herokuapp.com/api/';
+
+//Function with simple validation and then makes POST request to API to login
+//If user is found and passwords match it logs in and if authentication is failed it shows an error to user
 
 function logInFire() {
   const loginButtonDiv = document.getElementById('loginButtonDiv');
@@ -49,6 +54,9 @@ function logInFire() {
       loginButtonDiv.innerHTML = '<button type="button" onClick="logInFire()" class="btn btn-primary login-button" id="loginButton">Login</button>';
     });
 }
+
+//Function to make a POST request to API to register user
+//If user is registered the browser goes to login screen and otherwise it shows an error user that register failed
 
 function registerFire() {
   const registerButtonDiv = document.getElementById('registerButtonDiv');
@@ -97,11 +105,15 @@ function registerFire() {
     });
 }
 
+//Function that takes login POST request´s response and saves it to session storage
+
 function setSessionStorage(user) {
   sessionStorage.setItem("email", user.email);
   sessionStorage.setItem("name", user.name);
   sessionStorage.setItem("id", user._id);
 }
+
+//Function that sets input fields border colors to normal and removes errors from error div
 
 function resetLoginErrors() {
   email.style.borderColor = '#ced4da';
@@ -109,12 +121,16 @@ function resetLoginErrors() {
   errorField.innerHTML = '';
 }
 
+//Function that sets input fields border colors to normal and removes errors from error div
+
 function resetRegisterErrors() {
   name.style.borderColor = '#ced4da';
   email.style.borderColor = '#ced4da';
   password.style.borderColor = '#ced4da';
   errorField.innerHTML = '';
 }
+
+//Function that reads user information from session storage and if user is not found it redirects to login page
 
 function ensureAuthentication() {
   const user_email = sessionStorage.getItem("email");
@@ -136,6 +152,8 @@ function ensureAuthenticationAndLoadStatistics() {
   getUserStatistics();
 }
 
+//Function makes a GET request to API and returns a list of items or a text that user hasn´t bought any items
+
 function getUserItems() {
   const container = document.getElementById('items');
   container.innerHTML = '<img class="text-center img-rolling" src="img/rolling.svg" />';
@@ -150,6 +168,8 @@ function getUserItems() {
     })
     .catch(err => console.log(err));
 }
+
+//Function makes a GET request to API and returns user´s statistics
 
 function getUserStatistics() {
   const container = document.getElementById('statistics');
@@ -222,12 +242,16 @@ function returnUserStatistics(user) {
   `;
 }
 
+//Function that removes session storage and redirects to login page
+
 function logOut() {
   sessionStorage.removeItem("email");
   sessionStorage.removeItem("name");
   sessionStorage.removeItem("id");
   window.location.assign("index.html");
 }
+
+//Function makes a PUT request to API to increase countads variable by one
 
 function adsFire() {
   const user_id = sessionStorage.getItem("id");
@@ -239,17 +263,23 @@ function adsFire() {
     .catch(err => console.log(err));
 }
 
+//Function fires when buy a meal button is pressed, sets session storage and then shows payment modal
+
 function mealFire() {
   sessionStorage.setItem("item.name", 'Meal');
   sessionStorage.setItem("item.price", '6');
   paymentModal();
 }
 
+//Function fires when buy a blanket button is pressed, sets session storage and then shows payment modal
+
 function blanketFire() {
   sessionStorage.setItem("item.name", 'Blanket');
   sessionStorage.setItem("item.price", '15');
   paymentModal();
 }
+
+//Function inserts payment modal into the page
 
 function paymentModal() {
   const modalbody = document.getElementById('modal-body');
@@ -310,6 +340,10 @@ function paymentModal() {
         </form>
   `;
 }
+
+//Function that is fired when payment modal button is pressed
+//Makes a POST request to API using session storage
+//If request is successful user is redirected to bought items page, otherwise nothing happens
 
 function buyItem() {
   const itemProps = {
