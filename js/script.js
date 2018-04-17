@@ -214,7 +214,7 @@ function returnUserItems(items) {
       <div class="jumbotron">
         <p class="text-center">Date: ${days}.${months}.${year}</p>
         <p class="text-center">Name: ${item.name}</p>
-        <p class="text-center">Price: ${item.price}£</p>
+        <p class="text-center">Price: £${item.price}</p>
       </div>
     `
   });

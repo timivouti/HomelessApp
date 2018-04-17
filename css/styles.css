@@ -198,6 +198,10 @@ p {
     color: white !important;
 }
 
+.input-group-addon:last-child {
+    border-left: 1px solid #ccc;
+}
+
 @media only screen and (min-width: 600px) {
     .back-button {
 			display: none;
