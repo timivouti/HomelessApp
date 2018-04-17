@@ -96,6 +96,9 @@ table {
 	border-color: #F78733 !important;
 	width: 100px;
 	border-radius: 24px!important;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .form-control {
@@ -133,6 +136,14 @@ p {
 	border-color: #4ABDAC;
 	border: 0px;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #4ABDAC;
+}
+
+.navbar-default .navbar-toggle  {
+	background-color: white;
+} 
 
 .img-responsive, .img-items {
 	border-color: #DFDCE3 !important;
