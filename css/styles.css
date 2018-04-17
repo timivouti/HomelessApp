@@ -189,6 +189,10 @@ p {
 	margin-left: 10px;
 }
 
+.navbar-default .navbar-brand {
+    color: white !important;
+}
+
 @media only screen and (min-width: 600px) {
     .back-button {
 			display: none;
