@@ -111,12 +111,17 @@ a {
 }
 
 .p1 {
-font-size: 23px;
-color: #004D40 !important;
+    font-size: 23px;
+    color: white !important;
+}
+
+.p1green {
+    font-size: 23px;
+    color: #004D40 !important;
 }
 
 .text-center {
-	color: #004D40 !important;
+    color: white !important;
 }
 
 p {
