@@ -152,7 +152,7 @@ function ensureAuthenticationAndLoadStatistics() {
   getUserStatistics();
 }
 
-//Function makes a GET request to API and returns a list of items or a text that user hasn´t bought any items
+//Function makes a GET request to API and returns a list of items or a text that user hasn´t donated any items
 
 function getUserItems() {
   const container = document.getElementById('items');
@@ -187,7 +187,7 @@ function returnEmptyUserItems() {
   const container = document.getElementById('items');
    container.innerHTML = `
     <div class="jumbotron">
-      <p class="text-center">Couldn´t find any bought items.</p>
+      <p class="text-center">Couldn´t find any donated items.</p>
     </div>
   `;
 }
@@ -235,8 +235,8 @@ function returnUserStatistics(user) {
     <div class="jumbotron">
       <p class="text-center">Statistics</p>
       <p class="text-center">Name: ${user.name}</p>
-      <p class="text-center">Total Items Bought: ${itemsTotalBought}</p>
-      <p class="text-center">Total Items Value: £${itemsPriceTotal}</p>
+      <p class="text-center">Total Items Donated: ${itemsTotalBought}</p>
+      <p class="text-center">Donated Items Value: £${itemsPriceTotal}</p>
       <p class="text-center">Money Donated From Ads: £${adsMoneyMade}</p>
     </div>
   `;
