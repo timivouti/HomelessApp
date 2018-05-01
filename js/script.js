@@ -293,6 +293,7 @@ function paymentModal() {
                         <div class="input-group">
                             <input
                                 type="tel"
+                                id="creditcard-number"
                                 class="form-control"
                                 name="cardNumber"
                                 placeholder="Valid Card Number"
@@ -310,6 +311,7 @@ function paymentModal() {
                         <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
                         <input
                             type="tel"
+                            id="creditcard-expiration"
                             class="form-control"
                             name="cardExpiry"
                             placeholder="MM / YY"
@@ -323,6 +325,7 @@ function paymentModal() {
                         <label for="cardCVC">CV CODE</label>
                         <input
                             type="tel"
+                            id="creditcard-cvcode"
                             class="form-control"
                             name="cardCVC"
                             placeholder="CVC"
@@ -346,6 +349,34 @@ function paymentModal() {
 //If request is successful user is redirected to bought items page, otherwise nothing happens
 
 function buyItem() {
+  const creditcardNumber = document.getElementById('creditcard-number');
+  const creditcardExpiration = document.getElementById('creditcard-expiration');
+  const creditcardCvcode = document.getElementById('creditcard-cvcode');
+  let error = false;
+
+  creditcardNumber.style.borderColor = '#ccc';
+  creditcardExpiration.style.borderColor = '#ccc';
+  creditcardCvcode.style.borderColor = '#ccc';
+
+  if (!creditcardNumber.value || creditcardNumber.length < 3) {
+    creditcardNumber.style.borderColor = 'red';
+    error = true;
+  }
+
+  if (!creditcardExpiration.value || creditcardExpiration.length < 3) {
+    creditcardExpiration.style.borderColor = 'red';
+    error = true;
+  }
+
+  if (!creditcardCvcode.value || creditcardCvcode.length < 3) {
+    creditcardCvcode.style.borderColor = 'red';
+    error = true;
+  }
+
+  if (error) {
+    return;
+  }
+
   const itemProps = {
     name: sessionStorage.getItem("item.name"),
     price: sessionStorage.getItem("item.price")
